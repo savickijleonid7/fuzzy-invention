@@ -1,0 +1,15 @@
+struct StrokeTextLabel: UIViewRepresentable {
+    
+    let font: UIFont
+    let text: String
+    let strokeWidth: CGFloat
+    let textColot: UIColor
+    let strokeColor: UIColor
+    
+    func makeUIView(context: Context) -> UILabel {
+        let textFontAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.strokeWidth: -4,
+            NSAttributedString.Key.strokeColor: strokeColor,
+            NSAttributedString.Key.font : font,
+            NSAttributedString.Key.foregroundColor: textColot
+        ]
